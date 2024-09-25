@@ -1,0 +1,49 @@
+/* _content/TableMargeApp/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-zsuyg6ydhg] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-zsuyg6ydhg] {
+  color: #0077cc;
+}
+
+.btn-primary[b-zsuyg6ydhg] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-zsuyg6ydhg], .nav-pills .show > .nav-link[b-zsuyg6ydhg] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-zsuyg6ydhg] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-zsuyg6ydhg] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-zsuyg6ydhg] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-zsuyg6ydhg] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-zsuyg6ydhg] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

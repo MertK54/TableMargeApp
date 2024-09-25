@@ -1,0 +1,115 @@
+﻿@model TableMargeApp.ViewModels.TablesViewModel
+
+<div class="container mt-4">
+    <h1 class="mb-4">@ViewBag.TableTitle</h1>
+
+    <div class="card mb-4">
+        <div class="card-header text-center">
+            <h5>Mevcut Kayıtlı Veriler</h5>
+            <h6>Üretim Operasyon Bildirimleri</h2>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Kayıt No</th>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Toplam Süre</th>
+                        <th>Durum</th>
+                        <th>Durus Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Table1List)
+                    {
+                        <tr>
+                            <td>@item.kayitNo</td>
+                            <td>@item.baslangic</td>
+                            <td>@item.bitis</td>
+                            <td>@item.toplamSure</td>
+                            <td>@item.statu</td>
+                            <td>@item.durusNedeni</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header text-center">
+            <h5>Mevcut Kayıtlı Standart Duruş Bilgileri</h5>
+            <h6>Standart Duruşlar</h6>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Durus Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Table2List)
+                    {
+                        <tr>
+                            <td>@item.baslangic</td>
+                            <td>@item.bitis</td>
+                            <td>@item.durusNedeni</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button id="showTable3" class="btn btn-primary mb-4">Tablo 3'ü Oluştur</button>
+
+    <div id="table3Container" class="card mb-4" style="display:none;">
+        <div class="card-header text-center">
+            <h5>Üretim Operasyon Bildirimleri</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Kayıt No</th>
+                        <th>Başlangıç</th>
+                        <th>Bitiş</th>
+                        <th>Toplam Süre</th>
+                        <th>Durum</th>
+                        <th>Durus Nedeni</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Table3List)
+                    {
+                        <tr>
+                            <td>@item.kayitNo</td>
+                            <td>@item.baslangic</td>
+                            <td>@item.bitis</td>
+                            <td>@item.toplamSure</td>
+                            <td>@item.statu</td>
+                            <td>@item.durusNedeni</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('showTable3').addEventListener('click', function() {
+        var table3Container = document.getElementById('table3Container');
+        if (table3Container.style.display === 'none') {
+            table3Container.style.display = 'block'; 
+            this.innerText = 'Tablo 3\'ü Gizle'; 
+        } else {
+            table3Container.style.display = 'none';
+            this.innerText = 'Tablo 3\'ü Oluştur';
+        }
+    });
+</script>
